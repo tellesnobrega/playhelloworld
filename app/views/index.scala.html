@@ -1,0 +1,18 @@
+@(hadoopInfo: String, hadoopForm: Form[HadoopInfo])
+
+@import helper._
+
+@main("Hadoop Submition") {
+
+    <h2>Submit Hadoop Job</h2>
+
+    @form(routes.Application.submit()) {
+
+        @inputText(hadoopForm("info")) 
+
+        <input type="submit" value="Submit">
+
+    }
+
+}
+
